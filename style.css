@@ -5,8 +5,76 @@
 }
 
 .header {
+    display: grid;
     grid-column: 2 / 4;
-    background-color: rebeccapurple;
+    padding-left: 40px;
+    grid-template-rows: 0.75fr 1fr;
+}
+
+.top_half {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr;
+}
+
+.top_left {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px 200px;
+}
+
+.top_right {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+
+.bottom_half {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 1fr;
+}
+
+.bottom_left {
+    gap: 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10px 250px;
+}
+
+.bottom_right {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    color: white;
+    justify-items: center;
+    background-color: #0ea5e9;
+}
+
+.top_right > p, .bottom_left > p {
+    display: inline;
+}
+
+.title > p {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom_left img {
+    height: 50px;
+    width: 50px;
+}
+
+input {
+    width: 400px;
+    background-color: #e2e8f0;
+}
+
+#hi {
+    font-size: 10px;
 }
 
 .sidebar {
@@ -77,6 +145,10 @@ img {
     border: 2px solid black;
 }
 
+.announcements .title {
+    padding-top: 20px;
+}
+
 .announcement-cards {
     display: grid;
     padding: 15px;
@@ -88,13 +160,23 @@ img {
 }
 
 .trending-items {
+    display: grid;
     border-radius: 3%;
     padding-left: 15px;
     padding-right: 15px;
+    align-items: center;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.trending-items > img {
+    height: 30px;
+    width: 30px;
 }
 
 .header, .card, .announcement-cards, .trending-items {
     background-color: white;
 }
 
-
+.trending .title, .announcements .title {
+    padding-bottom: 11px;
+}
